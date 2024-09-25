@@ -21,6 +21,7 @@ pipeline {
         stage('push image') {
             steps {
                 echo "Pushing Docker image to Docker Hub..."
+                // Ensure the correct image repository is referenced
                 sh 'docker push Mervin2811/flaskapp:$BUILD_NUMBER'
             }
         }
